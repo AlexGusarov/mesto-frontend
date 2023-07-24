@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useCallback } from "react";
 import success from "../images/Union-success.png"
 import fail from "../images/Union-fail.png"
 
 function InfoToolTip({ isOpen, onClose, status }) {
 
-  function handleEsc(e) {
-    if (e.key === 'Escape') {
+  const handleEsc = useCallback((evt) => {
+    if (evt.key === 'Escape') {
       onClose && onClose()
     }
-  }
+  }, [onClose]);
 
   React.useEffect(() => {
     window.addEventListener('keydown', handleEsc)
     return () => {
       window.removeEventListener('keydown', handleEsc);
     }
-  }, [isOpen])
+  }, [isOpen, handleEsc])
 
   return (
     <div className={`popup ${isOpen && 'popup_opened'}`} >
