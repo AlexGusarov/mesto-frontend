@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 function PopupWithForm({ name, isOpen, onClose, title, children, buttonText, onSubmit }) {
 
-  function handleEsc(e) {
+  const handleEsc = useCallback((e) => {
     if (e.key === 'Escape') {
       onClose && onClose()
     }
-  }
+  }, [onClose]);
+
 
   React.useEffect(() => {
     window.addEventListener('keydown', handleEsc)
     return () => {
       window.removeEventListener('keydown', handleEsc);
     }
-  }, [isOpen])
+  }, [isOpen, handleEsc])
 
   return (
     <div className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}>
