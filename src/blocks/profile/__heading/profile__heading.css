@@ -1,0 +1,30 @@
+.profile__heading {
+  max-width: 370px;
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.14;
+  color: #fff;
+  margin: 0;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  grid-area: 'title';
+}
+
+@media screen and (max-width: 940px) {
+  .profile__heading {
+    text-align: center;
+    font-size: 27px;
+    line-height: 1.21;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__heading {
+    max-width: 250px;
+  }
+}

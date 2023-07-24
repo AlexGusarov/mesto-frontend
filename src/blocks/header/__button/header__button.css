@@ -1,0 +1,19 @@
+.header__button {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  color: #FFF;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  max-height: 35px;
+}
+
+
+.header__button:hover {
+  opacity: 0.6;
+}

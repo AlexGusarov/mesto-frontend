@@ -1,0 +1,8 @@
+.welcome__container {
+  max-width: 358px;
+  min-height: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  flex-shrink: 1;
+}

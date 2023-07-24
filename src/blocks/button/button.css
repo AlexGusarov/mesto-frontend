@@ -1,0 +1,10 @@
+.button {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: opacity ease 0.2s;
+  -o-transition: opacity ease 0.2s;
+  transition: opacity ease 0.2s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

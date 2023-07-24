@@ -1,0 +1,21 @@
+.page {
+  margin: 0 auto;
+  max-width: 880px;
+  min-height: 100vh;
+  padding: 45px 0 60px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 940px) {
+  .page {
+    padding: 28px 0 36px;
+  }
+}

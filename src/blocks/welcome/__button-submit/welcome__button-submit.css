@@ -1,0 +1,16 @@
+.welcome__button-submit {
+  width: 100%;
+  height: 50px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  background-color: #FFF;
+  color: #000;
+  margin: 216px 0 0 0;
+}
+
+.welcome__button-submit:hover {
+  opacity: 0.6;
+}
