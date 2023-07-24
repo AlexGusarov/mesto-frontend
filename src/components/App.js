@@ -133,7 +133,7 @@ function App() {
       }
     } catch (err) { console.log(err) }
     finally { setLoading(false) }
-  }, [loggedIn]);
+  }, [token]);
 
 
   const registerUser = useCallback(async (email, password) => {
@@ -182,7 +182,7 @@ function App() {
           console.log(`Произошла ошибка с получением данных карточек - ${err}`)
         })
     }
-  }, [loggedIn])
+  }, [loggedIn, token])
 
 
   useEffect(() => {
@@ -195,7 +195,7 @@ function App() {
           console.log(`Произошла ошибка с получением данных о пользователе - ${err}`);
         })
     }
-  }, [loggedIn]);
+  }, [loggedIn, token]);
 
 
   useEffect(() => {
