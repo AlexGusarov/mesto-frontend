@@ -1,3 +1,5 @@
+import { BASE_URL } from './constants';
+
 class Api {
   constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
@@ -68,9 +70,13 @@ class Api {
   }
 
   deleteCard(cardId) {
+    const token = localStorage.getItem('token');
     return this._request(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
-      headers: this.headers
+      headers: {
+        authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
     })
   }
 
@@ -116,8 +122,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto-server-1bb72610626b.herokuapp.com',
-  // baseUrl: 'http://localhost:3000',
+  baseUrl: BASE_URL,
   headers: {
     authorization: `Bearer ${localStorage.getItem('token')}`,
     'Content-Type': 'application/json'

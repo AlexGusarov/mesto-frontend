@@ -1,41 +1,27 @@
-import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import useFormWithValidationAndRender from '../hooks/useFormWithValidationAndRender'
+import { signupForm } from "../utils/formConfig";
+import ErrorTooltip from '../components/ErrorTooltip/ErrorTooltip';
 
 
-function Register({ onRegister, loggedIn }) {
+function Register({ onRegister, isError, message, loggedIn }) {
 
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  })
-
-  const handleChange = (evt) => {
-    const { name, value } = evt.target;
-    setFormData(
-      {
-        ...formData,
-        [name]: value
-      })
-  }
-
-  const makeFormClear = () => {
-    setFormData({
-      email: '',
-      password: ''
-    })
-  }
+  const { renderFormInputs, isFormValid, form, resetForm } = useFormWithValidationAndRender(signupForm);
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    const { email, password } = formData;
+
+    const email = form.email.value;
+    const password = form.password.value;
+
     if (!email || !password) {
       return;
     }
+
     onRegister(email, password);
-    makeFormClear();
+    resetForm();
     evt.target.reset();
   }
-
 
   return (
     <>
@@ -43,25 +29,15 @@ function Register({ onRegister, loggedIn }) {
         <div className="welcome__container">
           <p className="welcome__title">Регистрация</p>
           <form className="welcome__form" onSubmit={handleSubmit}>
-            <input
-              className="welcome__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              value={formData.email || ''}
-              onChange={handleChange}>
-            </input>
-            <input
-              className="welcome__input"
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Пароль"
-              value={formData.password || ''}
-              onChange={handleChange}>
-            </input>
-            <button type="submit" className="welcome__button-submit button">Зарегистрироваться</button>
+            {renderFormInputs()}
+            {isError && (<ErrorTooltip message={message} />)}
+            <button
+              type="submit"
+              className="welcome__button-submit button"
+              disabled={!isFormValid()}
+            >
+              Зарегистрироваться
+            </button>
           </form>
         </div>
       </div>

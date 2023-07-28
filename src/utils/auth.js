@@ -1,5 +1,4 @@
-const BASE_URL = 'https://mesto-server-1bb72610626b.herokuapp.com';
-// const BASE_URL = 'http://localhost:3000';
+import { BASE_URL } from './constants';
 
 const checkResponse = (res) => {
   if (res.ok) {

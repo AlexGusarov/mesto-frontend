@@ -1,0 +1,35 @@
+@keyframes appr {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.error-tooltip {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.error-tooltip__message {
+  display: inline-block;
+  width: 50%;
+  color: #FF3055;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+  animation: appr 0.3s ease;
+}
+
+.error-tooltip__message_success {
+  color: #2BE080
+}
