@@ -1,7 +1,7 @@
 .elements__list {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
   -webkit-column-gap: 17px;
   -moz-column-gap: 17px;
   column-gap: 17px;
