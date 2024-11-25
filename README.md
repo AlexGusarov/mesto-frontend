@@ -1,42 +1,40 @@
 # Mesto
 
-[Перейти на сайт](https://mestoapp.netlify.app/)
+[Go to website](https://mestoapp.netlify.app/)
 
-## Описание
+## Description
 
-**Mesto** — социальная сеть для обмена фотографиями. Является частью учебного проекта **Яндекс Практикума**, реализованная с использованием React и БЭМ.
+**Mesto** — social network for sharing photos. It is part of the educational project **Praktikum by Yandex**, implemented using React and BEM.
 
-## Технологии
+## Technologies
 
-- **React** для интерфейсов.
-- БЭМ для стилей.
-- **Node.js/Express** и **MongoDB** на бэкенде.
+- **React** 
+- **Node.js/Express**
+- **MongoDB** 
 
-## Используемые технологии
+Application on **React** using the BEM methodology. The backend is located on a separate domain, written in **Node JS** using the **Express** framework and connected to the **MongoDB** cloud database. To validate the server data, **Joi** is used. To increase security and protection against DDoS attacks, the **helmet** and **express-rate-limit** packages are included.
 
-Приложение на **React** по методологии БЭМ. Бэкенд расположен на отдельном домене, написан на **Node JS** с применением фреймворка **Express** и подключен к облачной базе данных **MongoDB**. Для валидации данных севера используется **Joi**. Для повышения безопасности и защиты от DDoS-атак подключены пакеты **helmet** и **express-rate-limit**. 
+## Installation and launch
+To run the project locally:
 
-## Установка и запуск
-Чтобы запустить проект локально:
-
-1. Склонируйте репозиторий:
+1. Clone the repository:
 
    ```
    git clone https://github.com/AlexGusarov/Memo.git
    ```
-2. Перейдите в директорию проекта:
+2. Go to the project directory:
 
    ```
    cd memo
    ```
-3. Установите зависимости:
+3. Install dependencies:
 
    ```
    npm install
    ```
-4. Запустите проект:
+4. Run the project:
 
    ```
    npm start
    ```
-5. Откройте [http://localhost:3000](http://localhost:3000) для просмотра в браузере.
+5. Open [http://localhost:3000](http://localhost:3000) to view in a browser.
