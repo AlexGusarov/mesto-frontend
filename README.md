@@ -4,7 +4,7 @@
 
 ## Description
 
-**Mesto** — social network for sharing photos. It is part of the educational project **Praktikum by Yandex**, implemented using React and BEM.
+**Mesto** — social network for sharing photos. It is part of the educational project **Praсtiсum by Yandex**, implemented using React and BEM.
 
 ## Technologies
 
